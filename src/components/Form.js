@@ -21,8 +21,10 @@ export default function Form(props) {
 
     return (
         <div className='container'>
+            <h1>Member Form</h1>
+
             <form onSubmit={onSubmit}>
-                <label>Name: 
+                <label>Name: <br />
                     <input
                     type='text'
                     name='name'
@@ -32,9 +34,9 @@ export default function Form(props) {
                     ></input>
                 </label>
 
-                <label>Email: 
+                <label>Email: <br />
                     <input
-                    type='text'
+                    type='email'
                     name='email'
                     value={values.email}
                     placeholder='Enter email here...'
@@ -42,16 +44,17 @@ export default function Form(props) {
                     ></input>
                 </label>
 
-                <label>Role: 
+                <label>Role: <br />
                     <select
                     name='role'
                     value={values.role}
                     onChange={onChange}
                     >
-                        <option>Front-End Engineer</option>
-                        <option>Back-End Engineer</option>
-                        <option>UX Designer</option>
-                        <option>Team Lead</option>
+                        <option value=''>**Choose a Role**</option>
+                        <option value='Front-End Engineer'>Front-End Engineer</option>
+                        <option value='Back-End Engineer'>Back-End Engineer</option>
+                        <option value='UX Designer'>UX Designer</option>
+                        <option value='Team Lead'>Team Lead</option>
                     </select>
                 </label>
                 <button>Submit</button>

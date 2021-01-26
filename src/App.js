@@ -35,7 +35,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Member Form</h1>
 
       <Form 
       values={formValues}
